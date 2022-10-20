@@ -154,7 +154,7 @@ One can understand PSO as a simpler version of Nbody problem.
 
 \noindent\textbf{OpenMP threading}
 Particles (location and velocity) are stored in arrays (\Ndim x \Np).
-The implementation updates each particle in \emph{OpenMP for} loops.
+The implementation updates each particle in OpenMP \emph{for} directive.
 OpenMP can ``spawn'' multiple threads to accelerate these loop with \code{\#pragma omp parallel for}.
 Because the computation load is more or less the same for calculating each particle, \code{schedule(static)} is used for managing load balance among different threads \cite{eijkhout_2016, eijkhout_2016_2}.
 
